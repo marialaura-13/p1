@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="css/bootstrap.min.css" />
+      <link rel="stylesheet" href="style.css" />
+      <!-- responsive css -->
+      <link rel="stylesheet" href="css/responsive.css" />
+      <!-- select bootstrap -->
+      <link rel="stylesheet" href="css/bootstrap-select.css" />
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
+   </head>
+   <body class="dashboard dashboard_1">
+      <div class="full_container">
+         <div class="inner_container">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+               <div class="sidebar_blog_1">
+                  <div class="sidebar-header">
+                     <div class="logo_section">
+                        <a href="index.html"><img class="logo_icon img-responsive" src="images/img-logo.png"/></a>
+                     </div>
+                  </div>
+                  <div class="sidebar_user_info">
+                     <div class="user_profle_side">
+                        <a href="index.html" class="user_img"><img class="img-responsive" src="images/img-logo.png" alt="#" /></a>
+                        <div class="user_info">
+                           <h6>TaTa-Prototipo</h6>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="sidebar_blog_2">
+                  <h4>Proveedor 1</h4>
+                  <ul class="list-unstyled components">
+                     <li class="active">
+                        <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"></i> <span>Servicio a locales</span></a>
+                        <ul class="collapse list-unstyled" id="dashboard">
+                           <li><a href="#Instock">Instock</a></li> 
+                           <li><a href="#">Venta perdida/Venta total</a></li>
+                           <li><a href="#Cobertura">Cobertura</a></li>
+                           <li><a href="#Top10">Top 10 items</a></li>  
+                        </ul>
+                     </li>
+                     <li class="active">
+                        <a href="#dash" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"></i> <span>Servicio a CDO</span></a>
+                        <ul class="collapse list-unstyled" id="dash">
+                           <li><a href="#">Fill Rate</a></li> 
+                           <li><a href="#">Incidencias</a></li>  
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span>Servicio a proveedor</span></a>
+                        <ul class="collapse list-unstyled" id="element">
+                           <li><a href="#">Break pack</a></li>
+                           <li><a href="#">Flujo</a></li>
+                           <li><a href="#">Tiempo de estadia</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span>Inventarios</span></a>
+                        <ul class="collapse list-unstyled" id="apps">
+                           <li><a href="#"><span>DOH en tiendas</span></a></li>
+                           <li><a href="#"><span>DOH en CDO</span></a></li>
+                           <li><a href="#"><span>Sell Out</span></a></li>
+                        </ul>
+                     </li>
+                     <li><a href="#"><span>Generador de scorecard</span></a></li>
+                  </ul>
+               </div>
+            </nav>
+            <!-- end sidebar -->
+            <!-- right content -->
+            <div id="content">
+               <!-- topbar -->
+               <div class="topbar">
+                  <nav class="navbar navbar-expand-lg navbar-light">
+                     <div class="full">
+                        <button type="button" id="sidebarCollapse" class="sidebar_toggle"><i class="fa fa-bars"></i></button>
+                        <div class="right_topbar">
+                           <div class="icon_info">
+                              <ul class="user_profile_dd">
+                                 <li>
+                                    <a class="dropdown-toggle" data-toggle="dropdown"><span class="name_user">Usuario</span></a>
+                                    <div class="dropdown-menu">
+                                       <a class="dropdown-item" href="profile.html">Mi cuenta</a>
+                                       <a class="dropdown-item" href="#">Opciones</a>
+                                       <a class="dropdown-item" href="login.html">Salir</a>
+                                    </div>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </nav>
+               </div>
+               <!-- end topbar -->
+               <!-- dashboard inner -->
+               <div class="midde_cont">
+                  <div class="container-fluid">
+                     <div class="row column_title">
+                        <div class="col-md-12">
+                           <div class="page_title">
+                              <h2>Servicio a locales</h2>
+                           </div>
+                        </div>
+                     </div>
+        
+                     <!-- graph -->
+                     <div class="row column2 graph margin_bottom_30">
+                        <div class="col-md-l2 col-lg-12">
+                           <div class="white_shd full">
+                              <div class="full graph_head">
+                                 <div class="heading1 margin_0">
+                                    <h2>Instock</h2>
+                                 </div>
+                              </div>
+                              <div class="full graph_revenue">
+                                 <div class="row">
+                                    <div class="col-md-12">
+                                       <div class="content">
+                                          <div class="area_chart">
+                                             <canvas id="instock"></canvas>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>  
+                     <!-- end  -->
+
+                     <div class="row column2 graph margin_bottom_30">
+                        <div class="col-md-l2 col-lg-12">
+                           <div class="white_shd full">
+                              <div class="full graph_head">
+                                 <div class="heading1 margin_0">
+                                    <h2>Venta perdida</h2>
+                                 </div>
+                              </div>
+                              <div id="chartDiv" style="width:50%; height:300px; margin:0 auto;">
+                                 <div class="row">
+                                    <div class="col-md-12">
+                                       <div class="content">
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>                               
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="row column2 graph margin_bottom_30">
+                        <div class="col-md-l2 col-lg-12" id="Cobertura">
+                           <div class="white_shd full">
+                              <div class="full graph_head">
+                                 <div class="heading1 margin_0">
+                                    <h2>Cobertura</h2>
+                                 </div>
+                              </div>
+                              <div id="chartDiv" style="width:50%; height:300px; margin:0 auto;">
+                                 <div class="row">
+                                    <div class="col-md-12">
+                                       <div class="content">
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>                               
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="row column2 graph margin_bottom_30">
+                        <div class="col-md-l2 col-lg-12">
+                           <div class="white_shd full">
+                              <div class="full graph_head">
+                                 <div class="heading1 margin_0">
+                                    <h2>Top 10 items</h2>
+                                 </div>
+                              </div>
+                              <div id="chartDiv" style="width:50%; height:300px; margin:0 auto;">
+                                 <div class="row">
+                                    <div class="col-md-12">
+                                       <div class="content">
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>
+                                          <br>                               
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="row column_title">
+                        <div class="col-md-12">
+                           <div class="page_title">
+                              <h2>Servicio a CDO</h2>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="row column_title">
+                        <div class="col-md-12">
+                           <div class="page_title">
+                              <h2>Servicio a proveedor</h2>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="row column_title">
+                        <div class="col-md-12">
+                           <div class="page_title">
+                              <h2>Inventarios</h2>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="row column_title">
+                        <div class="col-md-12">
+                           <div class="page_title">
+                              <h2>Generador de scorecard</h2>
+                           </div>
+                        </div>
+                    </div>   
+                  </div>                 
+               </div>
+               <!-- footer -->
+               <div class="container-fluid" id="pie">
+                  <div class="footer">
+                     <p>pie de pagina</p>                      
+                  </div>
+               </div>
+               <!-- end dashboard inner -->
+            </div>
+         </div>
+      </div>
+      <!-- jQuery -->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <!-- wow animation -->
+      <script src="js/animate.js"></script> 
+      <!-- js -->
+      <script src="js/functions.js"></script>
+      <script src="js/charts.js"></script>
+   </body>
+</html>

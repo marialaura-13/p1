@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="css/bootstrap.min.css" />
+      <link rel="stylesheet" href="style.css" />
+      <!-- responsive css -->
+      <link rel="stylesheet" href="css/responsive.css" />
+      <!-- select bootstrap -->
+      <link rel="stylesheet" href="css/bootstrap-select.css" />
+   </head>
+   <body class="dashboard dashboard_1">
+      <div class="full_container">
+         <div class="inner_container">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+               <div class="sidebar_blog_1">
+                  <div class="sidebar-header">
+                     <div class="logo_section">
+                        <a href="index.html"><img class="logo_icon img-responsive" src="images/img-logo.png" alt="#" /></a>
+                     </div>
+                  </div>
+                  <div class="sidebar_user_info">
+                     <div class="icon_setting"></div>
+                     <div class="user_profle_side">
+                        <div class="user_img"><img class="img-responsive" src="images/img-logo.png" alt="#" /></div>
+                        <div class="user_info">
+                           <h6>TaTa-Prototipo</h6>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="sidebar_blog_2">
+                  <h4>General</h4>
+                  <ul class="list-unstyled components">
+                     <li class="active">
+                        <a href="#dashboard" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"></i> <span>Proveedor 1</span></a>
+                        <ul class="collapse list-unstyled" id="dashboard">
+                           <li><a href="#">Contenido</a></li> 
+                           <li><a href="#">Contenido</a></li>  
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#element" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span>Proveedor 2</span></a>
+                        <ul class="collapse list-unstyled" id="element">
+                           <li><a href="#">Contenido</a></li>
+                           <li><a href="#">Contenido</a></li>
+                        </ul>
+                     </li>
+                     <li>
+                        <a href="#apps" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle"><span>Proveedor 3</span></a>
+                        <ul class="collapse list-unstyled" id="apps">
+                           <li><a href="#"><span>Contenido</span></a></li>
+                           <li><a href="#"><span>Contenido</span></a></li>
+                        </ul>
+                     </li>
+                     <li><a href="#"><span>Contenido</span></a></li>
+                     <li><a href="#"><span>Contenido</span></a></li>
+                  </ul>
+               </div>
+            </nav>
+            <!-- end sidebar -->
+            <!-- right content -->
+            <div id="content">
+               <!-- topbar -->
+               <div class="topbar">
+                  <nav class="navbar navbar-expand-lg navbar-light">
+                     <div class="full">
+                        <button type="button" id="sidebarCollapse" class="sidebar_toggle"><i class="fa fa-bars"></i></button>
+                        <div class="right_topbar">
+                           <div class="icon_info">
+                              <ul class="user_profile_dd">
+                                 <li>
+                                    <a class="dropdown-toggle" data-toggle="dropdown"><span class="name_user">Usuario</span></a>
+                                    <div class="dropdown-menu">
+                                       <a class="dropdown-item" href="#">Mi cuenta</a>
+                                       <a class="dropdown-item" href="#">Opciones</a>
+                                       <a class="dropdown-item" href="login.html">Salir</a>
+                                    </div>
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </nav>
+               </div>
+               <!-- end topbar -->
+               <!-- dashboard inner -->
+               <div class="midde_cont">
+                  <div class="container-fluid">
+                     <div class="row column_title">
+                        <div class="col-md-12">
+                           <div class="page_title">
+                              
+                           </div>
+                        </div>
+                     </div>
+                     <!-- row -->
+                     <div class="row column1">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                           <div class="white_shd full margin_bottom_30">
+                              <div class="full graph_head">
+                                 <div class="heading1 margin_0">
+                                    <h2>Perfil</h2>
+                                 </div>
+                              </div>
+                              <div class="full price_table padding_infor_info">
+                                 <div class="row">
+                                    <!-- user profile section --> 
+                                    <!-- profile image -->
+                                    <div class="col-lg-12">
+                                       <div class="full dis_flex center_text">
+                                          <div class="profile_img"><img width="180" class="rounded-circle" src="images/img-logo.png" alt="#" /></div>
+                                          <div class="profile_contant">
+                                             <div class="contact_inner">
+                                                <h3>Usuario</h3>
+                                                <p>Nombre Apellido</p>
+                                                <ul class="list-unstyled">
+                                                   <li>correo</li>
+                                                   <li>area</li>
+                                                </ul>
+                                             </div>
+                                             <div class="user_progress_bar">
+                                                <div class="progress_bar">
+                                                   <span class="skill" style="width:85%; height: 50%;">Nombre y Apellido</span>                   
+                                                   <div class="progress skill-bar ">
+                                                      <input class="form-control" id="name">
+                                                   </div>
+                                                   <span class="skill" style="width:78%;">Correo</span>   
+                                                   <div class="progress skill-bar ">
+                                                      <input class="form-control" id="email">
+                                                   </div>
+                                                   <span class="skill" style="width:47%;">Area</span>
+                                                   <div class="progress skill-bar ">
+                                                      <input class="form-control" id="area">
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-2"></div>
+                        </div>
+                        <!-- end row -->
+                     </div>
+                     <!-- footer -->
+                     <div class="container-fluid">
+                        <div class="footer">
+                           <p>pie de pagina</p>                      
+                        </div>
+                     </div>
+                  </div>
+                  <!-- end dashboard inner -->
+               </div>
+         </div>
+      <!-- jQuery -->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <!-- wow animation -->
+      <script src="js/animate.js"></script> 
+      <!-- chart js -->
+      <script src="js/Chart.min.js"></script>
+      <script src="js/Chart.bundle.min.js"></script>
+      <script src="js/utils.js"></script>
+      <script src="js/analyser.js"></script>
+      <!-- js -->
+      <script src="js/functions.js"></script>
+   </body>
+</html>
